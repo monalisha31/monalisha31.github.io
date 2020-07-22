@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>Mars Rover Navigator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link id="cssTheme" rel="stylesheet" href="css/main.css"/>
+    <link rel="shortcut icon" type="image/png" href="images/website.svg"/>
+  </head>
+  <body>
+ <div id='navbarDiv'>
+     <nav class="navbar navbar-inverse navbar-expand-sm">
+       <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+    <img src="images/website.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+         <div class="navbar-header">
+           <a id="refreshButton" class="navbar-brand ml-auto" href="#">Mars Rover Navigator</a>
+         </div>
+         <ul class="nav navbar-nav ml-auto justify-content-end">
+           <li class="dropdown">
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Algorithms
+             <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li id='startButtonDijkstra'><a href="#">Dijkstra's Algorithm</a></li>
+               <li id='startButtonAStar2'><a href="#">A* Search</a></li>
+               <li id='startButtonGreedy'><a href="#">Greedy Best-first Search</a></li>
+               <li id='startButtonAStar'><a href="#">Swarm Algorithm</a></li>
+               <li id='startButtonAStar3'><a href="#">Convergent Swarm Algorithm</a></li>
+               <li id='startButtonBidirectional'><a href="#">Bidirectional A* Algorithm</a></li>
+               <li id='startButtonBFS'><a href="#">Breadth-first Search</a></li>
+               <li id='startButtonDFS'><a href="#">Depth-first Search</a></li>
+             </ul>
+           </li>
+           <li class="dropdown">
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mazes &amp; Patterns
+             <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li id='startButtonCreateMazeTwo'><a href="#">Recursive Division</a></li>
+               <li id='startButtonCreateMazeThree'><a href="#">Recursive Division (vertical skew)</a></li>
+               <li id='startButtonCreateMazeFour'><a href="#">Recursive Division (horizontal skew)</a></li>
+               <li id='startButtonCreateMazeOne'><a href="#">Basic Random Maze</a></li>
+               <li id='startButtonCreateMazeWeights'><a href="#">Basic Weight Maze</a></li>
+               <li id='startStairDemonstration'><a href="#">Simple Stair Pattern</a></li>
+             </ul>
+           </li>
+           
+           <li id='startButtonStart'><button id="actualStartButton" class="btn btn-default navbar-btn" type="button">Visualize!</button></li>
+               <li class="dropdown">
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Clear &amp; Features
+             <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+                  <li id='startButtonAddObject'><a href="#">Add Obstacle</a></li>
+                  <li id='startButtonClearBoard'><a href="#">Clear Board</a></li>
+                  <li id='startButtonClearWalls'><a href="#">Clear Walls &amp; Weights</a></li>
+                  <li id='startButtonClearPath'><a href="#">Clear Path</a></li>
+
+             </ul>
+           </li>
+                   <li class="dropdown">
+             <a id="adjustSpeed" class="dropdown-toggle" data-toggle="dropdown" href="#">Speed
+             <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li id='adjustFast'><a  href="#">Fast      </a></li>
+               <li id='adjustAverage'><a href="#">Average</a></li>
+               <li id='adjustSlow'><a  href="#">Slow</a></li>
+             </ul>
+           </li>
+           <li> <a  data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Icons
+  </a></li>
+  
+         </ul>
+       </div>
+     </nav>
+   </div>
+ 
+    <div id='mainGrid'>
+      <div class="collapse" id="collapseExample">
+       <div id='mainText'>
+          <ul>
+          <li>
+            <div class="start"></div>Mars Curiosity Rover</li>
+          <li>
+            <div class="target"></div>Destination</li>
+          <li id="bombLegend">
+            <div class="object"></div>Obstacle</li>
+                    <div class="unvisited"></div>Unvisited Node</li>
+          <li>
+            <div class="visited"></div><div class="visitedobject"></div>Visited Nodes</li>
+          <li>
+            <div class="shortest-path"></div>Shortest-path Node</li>
+          <li>
+            <div class="wall"></div>Wall Node</li>
+        </ul>
+      </div>
+    </div>
+      <div id="algorithmDescriptor">Help the Mars Curiosity Rover to find the shortest path between two points while avoiding obstacles on the way. Pick an algorithm and then click Visualize!</div>
+      <table id='board'/>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src='js/main.js'></script>
+</html>
